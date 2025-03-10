@@ -53,3 +53,7 @@ I do not recommend searching for images online that show 13 missing segments, es
 
 **Use the tool at your own risk.** ⚠️
 
+
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=Aur3s.Bitcoin-Private-Key-Finder)
+
+
