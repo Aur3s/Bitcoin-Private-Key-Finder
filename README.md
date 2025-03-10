@@ -54,7 +54,6 @@ I do not recommend searching for images online that show 13 missing segments, es
 **Use the tool at your own risk.** ⚠️
 
 
-[![HitCount](https://hits.dwyl.com/Aur3s/Bitcoin-Private-Key-Finder.svg?style=flat-square)](http://hits.dwyl.com/Aur3s/Bitcoin-Private-Key-Finder)
-
+[![Visitor Count](https://komarev.com/ghpvc/?username=Aur3s&repo=Bitcoin-Private-Key-Finder&style=flat-square)](https://github.com/Aur3s/Bitcoin-Private-Key-Finder)
 
 
