@@ -1,59 +1,173 @@
 
-## Bitcoin Private Key Recovery Tool
+<p align="center">
+  <a href="https://github.com/Aur3s/Bitcoin-Private-Key-Finder">
+    <img src="https://komarev.com/ghpvc/?username=Aur3s&repo=Bitcoin-Private-Key-Finder&style=flat-square" alt="Visitors">
+  </a>
+</p>
 
-This tool is designed to recover missing segments of a Bitcoin private key by comparing generated public addresses to a target public address. It's especially useful when part of the private key is missing, enabling you to reconstruct and regain access to your Bitcoin wallet.
-
-### How It Works
-
-The tool accepts a **public Bitcoin address** and attempts to generate the corresponding private key by systematically guessing the missing segments. Once the generated public address matches the target address, the tool identifies the correct private key. This process is done offline to ensure privacy and speed.
-
-Missing key segments are represented as **`?`**
+<p align="center">
+  <img src="https://i.ytimg.com/vi/ILWJQ73iXg0/maxresdefault.jpg" alt="Bitcoin Private Key Recovery Tool">
+</p>
 
 
-### Getting Started
+# Bitcoin Private Key Recovery Tool
 
-**Step 1: Download Python 3.10**
-Ensure Python 3.10 is installed on your machine. [Download it here](https://www.python.org/downloads/release/python-3100/).
+A Bitcoin private key recovery utility designed for situations where a portion of a private key is already known but some characters are missing.
 
-**Step 2: Install Required Libraries** Run the following commands in your terminal to install the necessary libraries:
+The tool performs a targeted search by generating candidate keys from the known pattern, deriving their corresponding Bitcoin addresses, and comparing them against a specified target address. When a match is found, the correct private key is identified.
 
+> This project is intended for legitimate recovery scenarios where the owner possesses partial knowledge of the original private key.
+
+---
+
+## Features
+
+* Recover partially known Bitcoin private keys
+* Flexible wildcard-based search
+* Offline recovery process
+* Optional Discord notifications
+* Terminal-friendly output
+* Compatible with Linux, Windows, and Termux
+
+---
+
+## Recovery Model
+
+Unknown characters within the private key must be replaced with:
+
+```text
+?
 ```
-    pip install requests
-    pip install bitcoin
-    pip install colorama
+
+Example:
+
+```text
+KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYjgd9M7rFU73sVHn???
 ```
-**Step 3: (Optional) Set Up Discord Notifications**
 
-To receive a notification once the tool successfully recovers the key, add your **Discord webhook** URL on line **60** of the code. Replace the placeholder ```DISCORD WEBHOOKS```` with your actual webhook URL.
+The software systematically generates candidate combinations for the unknown positions and verifies each result by deriving the corresponding Bitcoin address.
 
-### Video Tutorial
+---
 
-For a complete walkthrough of how to use this tool, watch the tutorial below:
+## Requirements
 
-**[<img src="https://i.ytimg.com/vi/ILWJQ73iXg0/maxresdefault.jpg" width="100%">](https://www.youtube.com/watch?v=ILWJQ73iXg0&t=335s "# Bitcoin Recovery")**
+* Python 3.10+
+* Internet connection only if Discord notifications are enabled
 
+---
 
+## Installation
 
-### Notes
+Clone the repository:
 
--   The tool works offline for security and privacy, making it safe to use.
--   Ensure you are using a valid public Bitcoin address and that the missing key segments are properly marked with **`?`**.
+```bash
+git clone https://github.com/USERNAME/REPOSITORY.git
+cd REPOSITORY
+```
 
-### Notes
+Install dependencies:
 
--   The tool works **offline** for key recovery, ensuring **security** and **privacy**. The **internet** is used only for sending **Discord notifications** if enabled.
--   Ensure you are using a valid public Bitcoin address and that the missing key segments are properly marked with **`?`**.
+```bash
+pip install requests
+pip install bitcoin
+pip install colorama
+```
 
+---
 
-The Bitcoin private key recovery tool can be run on **Termux**, a Linux emulator for Android devices. However, you should exercise caution when using it if a large number of segments are missing, as the key recovery process may take a long time in such cases.
+## Usage
 
-The more powerful the device, the faster the search process will be. This means that stronger devices will be able to complete the operation more quickly. However, if a large number of segments are missing, such as 13 or more, the search will take a longer time to complete.
+Run the application:
 
-I do not recommend searching for images online that show 13 missing segments, especially if their authenticity has not been verified thoroughly. In some cases, these images may be misleading or inaccurate. Always ensure the data’s validity before attempting recovery, and avoid proceeding with such searches without prior verification.
+```bash
+python main.py
+```
 
-**Use the tool at your own risk.** ⚠️
+Provide:
 
+* The target Bitcoin address
+* The partially known private key
+* Missing positions marked using `?`
 
-[![Visitor Count](https://komarev.com/ghpvc/?username=Aur3s&repo=Bitcoin-Private-Key-Finder&style=flat-square)](https://github.com/Aur3s/Bitcoin-Private-Key-Finder)
+The recovery process will begin immediately.
 
+---
 
+## Discord Notifications (Optional)
+
+The tool can send a Discord notification when a matching private key is discovered.
+
+Locate the webhook configuration inside the source code and replace:
+
+```text
+DISCORD WEBHOOKS
+```
+
+with your Discord webhook URL.
+
+---
+
+## Performance Considerations
+
+Recovery speed depends primarily on:
+
+* Number of unknown characters
+* Available CPU resources
+* Search space size
+
+As the number of missing characters increases, the number of combinations grows exponentially. Small recovery jobs may complete quickly, while larger searches can require significant computational time.
+
+Example:
+
+| Missing Characters | Difficulty |
+| ------------------ | ---------- |
+| 1–4                | Low        |
+| 5–8                | Moderate   |
+| 9–12               | High       |
+| 13+                | Very High  |
+
+Actual recovery times vary depending on hardware and key structure.
+
+---
+
+## Security
+
+All key generation and verification operations are performed locally.
+
+No recovery data is transmitted externally.
+
+If Discord notifications are enabled, only the notification message is sent through the configured webhook.
+
+---
+
+## Platform Support
+
+Tested on:
+
+* Windows
+* Linux
+* Termux (Android)
+
+---
+
+## Disclaimer
+
+This software is provided for educational and legitimate wallet recovery purposes only.
+
+The author assumes no responsibility for misuse, data loss, financial loss, or improper operation of the software.
+
+Use at your own risk.
+
+---
+
+## Demonstration
+
+Video walkthrough:
+
+https://www.youtube.com/watch?v=ILWJQ73iXg0&t=335s
+
+---
+
+## License
+
+See the LICENSE file for licensing information.
