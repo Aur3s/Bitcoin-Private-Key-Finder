@@ -6,6 +6,10 @@
 </p>
 
 <p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header&text=✨%20Made%20with%20Magic%20✨&fontSize=40&fontAlignY=35&descAlignY=51&descAlign=62&animation=twinkling" width="100%"/>
+</p>
+
+<p align="center">
   <img src="https://i.ytimg.com/vi/ILWJQ73iXg0/maxresdefault.jpg" alt="Bitcoin Private Key Recovery Tool">
 </p>
 
