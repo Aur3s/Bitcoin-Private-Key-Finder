@@ -1,11 +1,5 @@
 
 <p align="center">
-  <a href="https://github.com/Aur3s/Bitcoin-Private-Key-Finder">
-    <img src="https://komarev.com/ghpvc/?username=Aur3s&repo=Bitcoin-Private-Key-Finder&style=flat-square" alt="Visitors">
-  </a>
-</p>
-
-<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header&text=✨%20Made%20with%20Magic%20✨&fontSize=40&fontAlignY=35&descAlignY=51&descAlign=62&animation=twinkling" width="100%"/>
 </p>
 
@@ -175,3 +169,9 @@ https://www.youtube.com/watch?v=ILWJQ73iXg0&t=335s
 ## License
 
 See the LICENSE file for licensing information.
+
+<p align="center">
+  <a href="https://github.com/Aur3s/Bitcoin-Private-Key-Finder">
+    <img src="https://komarev.com/ghpvc/?username=Aur3s&repo=Bitcoin-Private-Key-Finder&style=flat-square" alt="Visitors">
+  </a>
+</p>
